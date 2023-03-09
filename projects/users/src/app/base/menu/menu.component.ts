@@ -11,6 +11,7 @@ export class MenuComponent {
   constructor() {
     this.items = [
       { path: 'home', label: 'Inicio' },
+      { path: 'tasks', label: 'Tareas' },
       { path: 'about', label: 'Nosotros' },
     ];
   }

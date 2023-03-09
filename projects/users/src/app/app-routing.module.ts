@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -9,6 +8,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./home/home.module') // Que quiero que cargue
         .then((m) => m.HomeModule), // El modulo que quiero importar
+  },
+  {
+    path: 'tasks',
+    loadChildren: () =>
+      import('./tasks/tasks.module').then((m) => m.TasksModule),
   },
   {
     path: 'about',
