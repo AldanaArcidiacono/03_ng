@@ -1,0 +1,17 @@
+import { Component } from '@angular/core';
+import { MenuItems } from 'projects/users/src/types/menu.items';
+
+@Component({
+  selector: 'isdi-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.scss'],
+})
+export class MenuComponent {
+  items: MenuItems[];
+  constructor() {
+    this.items = [
+      { path: 'home', label: 'Inicio' },
+      { path: 'about', label: 'Nosotros' },
+    ];
+  }
+}
