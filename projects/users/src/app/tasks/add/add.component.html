@@ -1,1 +1,19 @@
-<p>add works!</p>
+<button (click)="isDisplayForm = !isDisplayForm">
+  <ng-container *ngIf="isDisplayForm; else elseTemplate">
+    Ocultar
+  </ng-container>
+  <!-- Es el equivalente a un fracment de React <></> -->
+  <ng-template #elseTemplate> Mostrar añadir tareas </ng-template>
+</button>
+
+<form action="" *ngIf="isDisplayForm">
+  <div class="form-group">
+    <label for="">Título</label>
+    <input type="text" />
+  </div>
+  <div class="form-group">
+    <label for="">Owner</label>
+    <input type="text" />
+  </div>
+  <button>Añadir tarea</button>
+</form>

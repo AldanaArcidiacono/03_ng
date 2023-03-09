@@ -2,6 +2,11 @@
 <isdi-add></isdi-add>
 <ul>
   <li *ngFor="let item of tasks">
-    <isdi-card [item]="item"></isdi-card>
+    <!-- Para escuchar el evento -->
+    <isdi-card
+      [item]="item"
+      (onDelete)="handleDelete($event)"
+      (onChange)="handleChange($event)"
+    ></isdi-card>
   </li>
 </ul>
